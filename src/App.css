@@ -12,6 +12,8 @@
 .quiz_page__content {
     margin: 0 auto;
     max-width: 480px;
+    min-height: 50vh;
+    width: 100%;
 }
 
 @media (min-width: 64em) {
@@ -26,7 +28,7 @@
 }
 
 .quiz_page-enter.quiz_page-enter-active {
-    transition: transform 300ms ease-in;
+    transition: transform 400ms ease;
     transform: translate3d(0,0,0);
 }
 
@@ -35,15 +37,15 @@
 }
 
 .quiz_page-leave.quiz_page-leave-active {
-    transition: transform 300ms ease-in;
+    transition: transform 400ms ease;
     transform: translate3d(-100%,0,0);
 }
 
-/*.quiz_page-appear {
+.quiz_page-appear {
     opacity: 0.01;
 }
 
 .quiz_page-appear.quiz_page-appear-active {
     opacity: 1;
-    transition: opacity .5s ease-in;
-}*/
+    transition: opacity 500ms ease;
+}

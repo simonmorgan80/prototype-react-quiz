@@ -12,10 +12,8 @@ class App extends Component {
 
         this.state = {
             current: 0,
-            showInformation: false,
-            userData: {
-
-            }
+            pageInformation: false,
+            userData: {}
         }
 
         this.handleAnswerClick = this.handleAnswerClick.bind(this);
@@ -42,7 +40,7 @@ class App extends Component {
         }
 
         this.setState({
-            showInformation: true,
+            pageInformation: true,
             userData: update(this.state.userData, {$merge: {[this.state.current]: {'answer':choiceText, 'status': answerStatus}}})
         });
     }
@@ -53,17 +51,21 @@ class App extends Component {
             // console.log('next question');
 
             this.setState({
-                current: this.state.current + 1,
-                showInformation: false
+                current: this.state.current + 1
             });
 
         } else {
             // console.log('end of questions');
-
+            
             this.setState({
-                showInformation: false
+                current: 0
             });
+            
         }
+
+        this.setState({
+            pageInformation: false
+        });
 
     }
 
@@ -75,7 +77,7 @@ class App extends Component {
                     questionDataSet={this.state.questionData[this.state.current]}
                     handleAnswerClick={this.handleAnswerClick}
                     handleNextQuestion={this.handleNextQuestion}
-                    showInformation={this.state.showInformation}
+                    pageInformation={this.state.pageInformation}
                     userData={this.state.userData[this.state.current]}
                 />
 

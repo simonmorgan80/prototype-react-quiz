@@ -1,0 +1,18 @@
+.answer_item {
+	margin: 1rem 0;
+}
+
+.answer_button {
+	background-color: #eaeaea;
+	border: 0;
+	cursor: pointer;
+	display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    padding: 1rem;
+    width: 100%;
+}
+
+.answer_button:hover {
+	background-color: #ddd;
+}

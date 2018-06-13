@@ -8,7 +8,7 @@ const QuizQuestions = [
             "Brazil"
         ],
         correct: 3,
-        information: "Lorem ipsum sit dolor"
+        information: "Quos sapiente dicta totam a nesciunt assumenda. Qui voluptatibus ratione minus voluptates, voluptatum. Quos voluptate nulla atque voluptatibus."
     },
     {
         question: "Which player will win the Golden boot",
