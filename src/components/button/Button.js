@@ -1,18 +1,19 @@
 import React from 'react';
-
 import './Button.css';
 
-function Button(props) {
-    
+const Button = (props) => {
+
     return (
+        <div>
 
-        <button 
-            onClick={() => props.handler()}
-            className="button"
-        >
-        {props.label}
-        </button>
+            <button
+                onClick={() => props.handler()}
+                className="button"
+            >
+                {props.label}
+            </button>
 
+        </div>
     )
 }
 
